@@ -30,21 +30,44 @@
         <button class="button">Edit</button>
       </ion-header-bar>
       <ion-content>
+
         <div class="row">
           <div class="col">
-            <button class="button button-{{film_type ? '' : 'outline'}} button-dark" ng-click = "film_type = !film_type">Dram</button>
+            <button class="button button-{{drama ? '' : 'outline'}} button-block button-dark" ng-click = "drama = !drama">Dram</button>
           </div>
           <div class="col">
-            <button class="button button-block button-calm">Aksiyon</button>
+            <button class="button button-{{action ? '' : 'outline'}} button-block button-calm" ng-click = "action = !action">Aksiyon</button>
+          </div>
+          <div class="col">
+            <button class="button button-{{fantastic ? '' : 'outline'}} button-block button-positive" ng-click = "fantastic = !fantastic">Fantastik</button>
+          </div>
+          <div class="col">
+            <button class="button button-{{thriller ? '' : 'outline'}} button-block button-balanced" ng-click = "thriller = !thriller">Gerilim</button>
           </div>
         </div>
-        <br>
+
         <div class="row">
           <div class="col">
-            <button class="button button-block button-calm" ng-click = "random()">random</button>  
+            <button class="button button-{{comedy ? '' : 'outline'}} button-block button-energized" ng-click = "comedy = !comedy">Komedi</button>
+          </div>
+          <div class="col">
+            <button class="button button-{{horror ? '' : 'outline'}} button-block button-assertive" ng-click = "horror = !horror">Korku</button>
+          </div>
+          <div class="col">
+            <button class="button button-{{crime ? '' : 'outline'}} button-block button-royal" ng-click = "crime = !crime">Suç</button>
+          </div>
+          <div class="col">
+            <button class="button button-{{historic ? '' : 'outline'}} button-block button-stable" ng-click = "historic = !historic">Tarihi</button>
           </div>
         </div>
-        {{film.name}}
+
+
+        <div class="row">
+          <div class="col">
+            <button class="button button-block button-calm" ng-click = "random()">Rastgele Film Bul</button>  
+          </div>
+        </div>
+        {{film}}
       </ion-content>
     </ion-pane>
   </body>
